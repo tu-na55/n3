@@ -1,86 +1,62 @@
-<template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
-      <!-- <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div> -->
+<template lang="pug">
+  v-layout(column justify-center align-center)
+    v-flex(xs12 sm8 md6)
 
-      <!-- <v-card class="mx-auto" height="400" width="500"> -->
-      <v-card>
-        <v-list>
-          <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
-            <!-- <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action> -->
-            <v-list-item-content>
-              <v-list-item-title v-text="item.title" />
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
+        //- v-row(align="center" justify="center")
+        //- v-col.text-center
 
-        <v-spacer></v-spacer>
-        <v-btn icon>
-          <v-icon>mdi-magnify</v-icon>
-        </v-btn>
+        //- v-container(fluid)
+        //- v-row
+        //- v-col(cols="12" sm="6" offset-sm="3")
+        //- v-col(v-for="i in 6" :key="i" cols="4")
+        v-sheet.mx-auto
+          ul
+            li
+              a(href="/menu1") menu1
+              a(href="/menu2") menu2
+              a(href="/menu3") menu3
+              a(href="/post-preview") post-preview
+            v-spacer
+            v-btn(icon)
+              v-icon mdi-magnify
+            v-btn(icon)
+              v-icon mdi-filter
 
-        <v-btn icon>
-          <v-icon>mdi-filter</v-icon>
-        </v-btn>
-        <v-stepper></v-stepper>
-      </v-card>
+        v-card.mx-auto
+          v-card-title data: {{ cardTitle }}
+          v-card-text
+            .text-xs-right
+              em
+                small &mdash; text-xs-right
 
-      <v-card>
-        <v-card-title class="headline">pageIndex_Home</v-card-title>
-        <v-card-text>
-          <div class="text-xs-right">
-            <em><small>&mdash; text-xs-right</small></em>
-          </div>
-          <!-- <nuxt-link to="/menu1">メニュー1</nuxt-link> -->
-        </v-card-text>
+          v-list
+            v-list-item(
+              v-for="(item, i) in items"
+              :key="i"
+              :to="item.to"
+              router exact
+            )
+              v-list-item-content
+                v-list-item-title(v-text="item.title")
 
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire">
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-    <!-- <v-row align="center" justify="center"> -->
-    <!-- <v-col class="text-center"> -->
-    <!-- <v-tooltip left>
-      <template v-slot:activator="{ on }">
-        <v-btn :href="source" icon large target="_blank" v-on="on">
-          <v-icon large>mdi-code-tags</v-icon>
-        </v-btn>
-      </template>
-      <span>Source</span>
-    </v-tooltip> -->
-    <!-- </v-col> -->
-    <!-- </v-row> -->
-  </v-layout>
+          v-card-actions
+            v-tooltip(left)
+              template(v-slot:activator="{ on }")
+                v-btn(primary v-on="on") tooltip
 </template>
 
-<script>
+<script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({})
 export default class PageIndex extends Vue {
   data() {
     return {
-      drawer: true,
-      // drawers: ['Default (no property)', 'Permanent', 'Temporary'],
-      // fixed: false,
-      // mini: true,
-      // miniVariant: true,
-      //       right: true,
-      //       rightDrawer: false,
-      //       title: 'Vuetify.js',
+      cardTitle: '名前',
       items: [
         {
           // icon: 'dvr',
-          title: '・最近の更新',
+          title: '・最近の更新, board',
           to: '/',
         },
         {
@@ -92,13 +68,4 @@ export default class PageIndex extends Vue {
     }
   }
 }
-// import Logo from '~/components/Logo.vue'
-// import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
-// export default {
-//   components: {
-//     Logo,
-//     VuetifyLogo,
-//   },
-// }
 </script>

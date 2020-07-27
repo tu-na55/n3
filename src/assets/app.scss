@@ -1,19 +1,4 @@
 
-$general-fonts: 'Noto Sans JP', sans-serif;
-// 'Noto Sans JP', Hiragino Kaku Gothic Pro, sans-serif, Meiryo, MS PGothic, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Arial, 'メイリオ';
-
-
-// #app {
-//   font-family: $general-fonts;
-// }
-
-
-body {
-//   margin: 0;
-  font-family: $general-fonts;
-//   /* background: #e1ddce; */
-}
-
 // .nuxt-progress {
 //   opacity: 1 !important;
 //   transition: 0.5s;
@@ -26,22 +11,22 @@ body {
 //   }
 // }
 
-// ul {
-//   margin: 0;
-//   padding-left: 0;
-//   list-style: none;
-// }
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
 
-// a {
-//   text-decoration: none;
-// }
+a {
+  text-decoration: none;
+}
 
-// .page-enter-active,
-// .page-leave-active {
-//   transition: 0.2s;
-// }
+.page-enter-active,
+.page-leave-active {
+  transition: 0.2s;
+}
 
-// .page-enter,
-// .page-leave-to {
-//   opacity: 0;
-// }
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}

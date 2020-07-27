@@ -169,13 +169,13 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  // axios: {
-  //   proxy: true,
-  //   // baseURL: "http://localhost:8000/api"
-  //   // baseURL: "http://127.0.0.1:49588/api"
-  //   // baseURL: 'http://django:8000',
-  //   // browserBaseURL: 'http://localhost:8000'
-  // },
+  axios: {
+    //   proxy: true,
+    //   // baseURL: "http://localhost:8000/api"
+    //   // baseURL: "http://127.0.0.1:49588/api"
+    //   // baseURL: 'http://django:8000',
+    //   // browserBaseURL: 'http://localhost:8000'
+  },
   // proxy: {
   //   '/api': 'http://api:5432',
   // },

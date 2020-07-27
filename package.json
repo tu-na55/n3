@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
@@ -35,6 +36,8 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "material-design-icons-iconfont": "^5.0.1",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0"
   }
 }
